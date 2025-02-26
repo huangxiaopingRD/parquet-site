@@ -46,8 +46,8 @@ Implementations:
 | Data type                                 | C++   | Java  | Go    | Rust  | cuDF  | hyparquet |
 | ----------------------------------------- | ----- | ----- | ----- | ----- | ----- | --------- |
 | STRING                                    |  ✅   |  ✅   |       |  ✅   |  ✅   | (R)       |
-| ENUM                                      |  ❌   |  ✅   |       |  ✅(*)|  ❌   | (R)       |
-| UUID                                      |  ❌   |  ✅   |       |  ✅(*)|  ❌   | (R)       |
+| ENUM                                      |  ❌   |  ✅   |       |  ✅(1)|  ❌   | (R)       |
+| UUID                                      |  ❌   |  ✅   |       |  ✅(1)|  ❌   | (R)       |
 | 8, 16, 32, 64 bit signed and unsigned INT |  ✅   |  ✅   |       |  ✅   |  ✅   | (R)       |
 | DECIMAL (INT32)                           |  ✅   |  ✅   |       |  ✅   |  ✅   | (R)       |
 | DECIMAL (INT64)                           |  ✅   |  ✅   |       |  ✅   |  ✅   | (R)       |
@@ -57,15 +57,15 @@ Implementations:
 | TIME (INT32)                              |  ✅   |  ✅   |       |  ✅   |  ✅   | (R)       |
 | TIME (INT64)                              |  ✅   |  ✅   |       |  ✅   |  ✅   | (R)       |
 | TIMESTAMP (INT64)                         |  ✅   |  ✅   |       |  ✅   |  ✅   | (R)       |
-| INTERVAL                                  |  ✅   |  ✅(*)|       |  ✅   |  ❌   | (R)       |
-| JSON                                      |  ✅   |  ✅(*)|       |  ✅(*)|  ❌   | (R)       |
-| BSON                                      |  ❌   |  ✅(*)|       |  ✅(*)|  ❌   | (R)       |
+| INTERVAL                                  |  ✅   |  ✅(1)|       |  ✅   |  ❌   | (R)       |
+| JSON                                      |  ✅   |  ✅(1)|       |  ✅(1)|  ❌   | (R)       |
+| BSON                                      |  ❌   |  ✅(1)|       |  ✅(1)|  ❌   | (R)       |
 | LIST                                      |  ✅   |  ✅   |       |  ✅   |  ✅   | (R)       |
 | MAP                                       |  ✅   |  ✅   |       |  ✅   |  ✅   | (R)       |
 | UNKNOWN (always null)                     |  ✅   |  ✅   |       |  ✅   |  ✅   | (R)       |
-| FLOAT16                                   |  ✅   |  ✅(*)|       |  ✅   |  ✅   | (R)       |
+| FLOAT16                                   |  ✅   |  ✅(1)|       |  ✅   |  ✅   | (R)       |
 
-(*): Only supported to use its annotated physical type
+* \(1) Only supported to use its annotated physical type
 
 ### Encodings
 
@@ -75,13 +75,13 @@ Implementations:
 | PLAIN_DICTIONARY                          |  ✅   |  ✅   |       |  ✅   |  ✅   | (R)       |
 | RLE_DICTIONARY                            |  ✅   |  ✅   |       |  ✅   |  ✅   | (R)       |
 | RLE                                       |  ✅   |  ✅   |       |  ✅   |  ✅   | (R)       |
-| BIT_PACKED (deprecated)                   |  ✅   |  ✅   |       |  ❌(*)|  (R)  | (R)       |
+| BIT_PACKED (deprecated)                   |  ✅   |  ✅   |       |  ❌(1)|  (R)  | (R)       |
 | DELTA_BINARY_PACKED                       |  ✅   |  ✅   |       |  ✅   |  ✅   | (R)       |
 | DELTA_LENGTH_BYTE_ARRAY                   |  ✅   |  ✅   |       |  ✅   |  ✅   | (R)       |
 | DELTA_BYTE_ARRAY                          |  ✅   |  ✅   |       |  ✅   |  ✅   | (R)       |
 | BYTE_STREAM_SPLIT                         |  ✅   |  ✅   |       |  ✅   |  ✅   | (R)       |
 
-(*): Partial read support, but only in the case of level data with a bitwidth of 0
+* \(1) Partial read support, but only in the case of level data with a bitwidth of 0
 
 ### Compressions
 
