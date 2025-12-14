@@ -1,0 +1,125 @@
+engine_id: arrow
+last_updated: "2025-12-09"
+support:
+  physical-boolean:
+    status: full
+  physical-int32:
+    status: full
+  physical-int64:
+    status: full
+  physical-int96:
+    status: full
+  physical-float:
+    status: full
+  physical-double:
+    status: full
+  physical-byte-array:
+    status: full
+  physical-fixed-len-byte-array:
+    status: full
+  logical-string:
+    status: full
+  logical-enum:
+    status: none
+  logical-uuid:
+    status: none
+  logical-int-types:
+    status: full
+  logical-decimal-int32:
+    status: full
+  logical-decimal-int64:
+    status: full
+  logical-decimal-byte-array:
+    status: full
+  logical-decimal-fixed-len-byte-array:
+    status: full
+  logical-float16:
+    status: full
+  logical-date:
+    status: full
+  logical-time-int32:
+    status: full
+  logical-time-int64:
+    status: full
+  logical-timestamp-int64:
+    status: full
+  logical-interval:
+    status: full
+  logical-json:
+    status: full
+  logical-bson:
+    status: none
+  logical-variant:
+    status: unknown
+  logical-geometry:
+    status: full
+  logical-geography:
+    status: full
+  logical-list:
+    status: full
+  logical-map:
+    status: full
+  logical-unknown:
+    status: full
+  encoding-plain:
+    status: full
+  encoding-plain-dictionary:
+    status: full
+  encoding-rle-dictionary:
+    status: full
+  encoding-rle:
+    status: full
+  encoding-bit-packed:
+    status: full
+  encoding-delta-binary-packed:
+    status: full
+  encoding-delta-length-byte-array:
+    status: full
+  encoding-delta-byte-array:
+    status: full
+  encoding-byte-stream-split:
+    status: full
+  compression-uncompressed:
+    status: full
+  compression-brotli:
+    status: full
+  compression-gzip:
+    status: full
+  compression-lz4-deprecated:
+    status: full
+  compression-lz4-raw:
+    status: full
+  compression-lzo:
+    status: none
+  compression-snappy:
+    status: full
+  compression-zstd:
+    status: full
+  format-bloom-filters:
+    status: read
+  format-bloom-filter-length:
+    status: read
+  format-stats-min-max:
+    status: full
+  format-page-index:
+    status: full
+  format-page-crc32:
+    status: full
+  format-modular-encryption:
+    status: full
+  format-size-statistics:
+    status: full
+  format-data-page-v2:
+    status: full
+  api-external-column-data:
+    status: full
+  api-sorting-columns:
+    status: full
+  api-rowgroup-pruning-stats:
+    status: none
+  api-rowgroup-pruning-bloom:
+    status: none
+  api-column-projection:
+    status: full
+  api-page-pruning-stats:
+    status: none
